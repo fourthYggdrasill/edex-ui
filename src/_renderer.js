@@ -628,6 +628,11 @@ window.openSettings = async () => {
                         <td><input type="text" id="settingsEditor-shell" value="${window.settings.shell}"></td>
                     </tr>
                     <tr>
+                        <td>shellArgs</td>
+                        <td>Arguments to pass to the shell</td>
+                        <td><input type="text" id="settingsEditor-shellArgs" value="${window.settings.shellArgs || ''}"></td>
+                    </tr>
+                    <tr>
                         <td>cwd</td>
                         <td>Working Directory to start in</td>
                         <td><input type="text" id="settingsEditor-cwd" value="${window.settings.cwd}"></td>
@@ -807,9 +812,16 @@ window.openSettings = async () => {
     });
 };
 
+window.writeFile = (path) => {
+    fs.writeFile(path, document.getElementById("fileEdit").value, "utf-8", () => {
+        document.getElementById("fedit-status").innerHTML = "<i>File saved.</i>";
+    });
+}
+
 window.writeSettingsFile = () => {
     window.settings = {
         shell: document.getElementById("settingsEditor-shell").value,
+        shellArgs: document.getElementById("settingsEditor-shellArgs").value,
         cwd: document.getElementById("settingsEditor-cwd").value,
         env: document.getElementById("settingsEditor-env").value,
         username: document.getElementById("settingsEditor-username").value,

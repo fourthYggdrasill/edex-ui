@@ -46,7 +46,7 @@
     "appId": "com.edex.ui",
     "productName": "eDEX-UI",
     "asar": true,
-    "compression": "maximum",
+    "compression": "normal",
     "copyright": "Copyright © 2017-2020 Gabriel 'Squared' SAILLARD <gabriel@saillard.dev> (https://gaby.dev)",
     "directories": {
       "output": "dist",
@@ -106,12 +106,12 @@
   },
   "dependencies": {
     "clean-css": "4.2.3",
-    "electron": "10.1.5",
+    "electron": "^10.1.5",
     "electron-builder": "^22.9.1",
     "electron-rebuild": "^2.3.2",
     "node-abi": "2.19.1",
     "node-json-minify": "1.0.0",
-    "snyk": "^1.424.4",
+    "snyk": "^1.427.0",
     "uglify-es": "3.3.9"
   },
   "optionalDependencies": {
