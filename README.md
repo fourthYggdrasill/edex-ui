@@ -8,10 +8,10 @@
   <a href="#featured-in"><img alt="undefined" src="https://img.shields.io/github/downloads/GitSquared/edex-ui/total.svg?style=popout"></a>
   <a href="https://github.com/GitSquared/edex-ui/blob/master/LICENSE"><img alt="undefined" src="https://img.shields.io/github/license/GitSquared/edex-ui.svg?style=popout"></a>
   <br>
-  <a href="https://github.com/GitSquared/edex-ui/releases/download/v2.2.2/eDEX-UI.Windows.Installer.exe" target="_blank"><img alt="undefined" src="https://badgen.net/badge/Download/Windows/?color=blue&icon=windows&label"></a>
-  <a href="https://github.com/GitSquared/edex-ui/releases/download/v2.2.2/eDEX-UI.MacOS.Image.dmg" target="_blank"><img alt="undefined" src="https://badgen.net/badge/Download/macOS/?color=grey&icon=apple&label"></a>
-  <a href="https://github.com/GitSquared/edex-ui/releases/download/v2.2.2/eDEX-UI.Linux.x86_64.AppImage" target="_blank"><img alt="undefined" src="https://badgen.net/badge/Download/Linux64/?color=orange&icon=terminal&label"></a>
-  <a href="https://github.com/GitSquared/edex-ui/releases/download/v2.2.2/eDEX-UI.Linux.i386.AppImage" target="_blank"><img alt="undefined" src="https://badgen.net/badge/Download/Linux32/?color=orange&icon=terminal&label"></a>
+  <a href="https://github.com/GitSquared/edex-ui/releases/download/v2.2.5/eDEX-UI-Windows.exe" target="_blank"><img alt="undefined" src="https://badgen.net/badge/Download/Windows/?color=blue&icon=windows&label"></a>
+  <a href="https://github.com/GitSquared/edex-ui/releases/download/v2.2.5/eDEX-UI-macOS.dmg" target="_blank"><img alt="undefined" src="https://badgen.net/badge/Download/macOS/?color=grey&icon=apple&label"></a>
+  <a href="https://github.com/GitSquared/edex-ui/releases/download/v2.2.5/eDEX-UI-Linux-x86_64.AppImage" target="_blank"><img alt="undefined" src="https://badgen.net/badge/Download/Linux64/?color=orange&icon=terminal&label"></a>
+  <a href="https://github.com/GitSquared/edex-ui/releases/download/v2.2.5/eDEX-UI-Linux-arm64-AppImage" target="_blank"><img alt="undefined" src="https://badgen.net/badge/Download/LinuxArm64/?color=orange&icon=terminal&label"></a>
   <a href="https://aur.archlinux.org/packages/edex-ui" target="_blank"><img alt="undefined" src="https://badgen.net/badge/AUR/Package/cyan"></a>
   <br><br><br>
 </p>
@@ -44,15 +44,19 @@ Click the banner below and sign up to **Bytes**, the only newsletter cool enough
 ## Screenshots
 ![Default screenshot](https://github.com/GitSquared/edex-ui/raw/master/media/screenshot_default.png)
 
-_([neofetch](https://github.com/dylanaraps/neofetch) on eDEX-UI 2.2 with the default "tron" theme & QWERTY keyboard)_
+_[neofetch](https://github.com/dylanaraps/neofetch) on eDEX-UI 2.2 with the default "tron" theme & QWERTY keyboard_
 
-![Interstellar screenshot](https://github.com/GitSquared/edex-ui/raw/master/media/screenshot_white.png)
+![Blade screenshot](https://github.com/GitSquared/edex-ui/raw/master/media/screenshot_blade.png)
 
-_(Graphical settings editor and list of keyboard shortcuts on eDEX-UI 2.2 with the "interstellar" bright theme)_
+_Checking out available themes in [eDEX's config dir](https://github.com/GitSquared/edex-ui/wiki/userData) with [`ranger`](https://github.com/ranger/ranger) on eDEX-UI 2.2 with the "blade" theme_
 
 ![Disrupted screenshot](https://github.com/GitSquared/edex-ui/raw/master/media/screenshot_disrupted.png)
 
-_([cmatrix](https://github.com/abishekvashok/cmatrix) on eDEX-UI 2.2 with the experimental "tron-disrupted" theme, and the user-contributed DVORAK keyboard)_
+_[cmatrix](https://github.com/abishekvashok/cmatrix) on eDEX-UI 2.2 with the experimental "tron-disrupted" theme, and the user-contributed DVORAK keyboard_
+
+![Horizon screenshot](https://github.com/GitSquared/edex-ui/raw/master/media/screenshot_horizon.png)
+
+_Editing eDEX-UI source code with `nvim` on eDEX-UI 2.2 with the custom [`horizon-full`](https://github.com/GitSquared/horizon-edex-theme) theme_
 
 ## Q&A
 #### How do I get it?
@@ -67,8 +71,7 @@ You can't disable them (yet) but you can hide them. See the `tron-notype` theme.
 On Linux and macOS, eDEX tracks where you're going in your terminal tab to display the content of the current folder on-screen.
 Sadly, this is technically impossible to do on Windows right now, so the file browser reverts back to a "detached" mode. You can still use it to browse files & directories and click on files to input their path in the terminal.
 #### Can this run on a Raspberry Pi / ARM device?
-Running eDEX on ARM is not officially supported, but some users have attempted to compile it for the platform.
-See [this issue comment](https://github.com/GitSquared/edex-ui/issues/313#issuecomment-443465345), and the thread on issue [#818](https://github.com/GitSquared/edex-ui/issues/818).
+We provide prebuilt arm64 builds. For other platforms, see [this issue comment](https://github.com/GitSquared/edex-ui/issues/313#issuecomment-443465345), and the thread on issue [#818](https://github.com/GitSquared/edex-ui/issues/818).
 #### Is this repo actively maintained?
 [See this notice](https://github.com/GitSquared/edex-ui/issues/769)
 #### How did you make this?
@@ -104,13 +107,13 @@ Thanks! If you feel like it, you can [buy me a coffee](https://buymeacoff.ee/gab
 on *nix systems (You'll need the Xcode command line tools on macOS):
 - clone the repository
 - `npm run install-linux`
-- `npm start`
+- `npm run start`
 
 on Windows:
 - start cmd or powershell **as administrator**
 - clone the repository
 - `npm run install-windows`
-- `npm start`
+- `npm run start`
 
 #### Building
 Note: Due to native modules, you can only build targets for the host OS you are using.
@@ -120,12 +123,8 @@ Note: Due to native modules, you can only build targets for the host OS you are 
 
 The script will minify the source code, recompile native dependencies and create distributable assets in the `dist` folder.
 
-#### A note about versioning, branches, and commit messages
-Currently, development is done directly on the `master` branch. The version tag on this branch is the version tag of the next release with the `-pre` suffix (e.g `v2.6.1-pre`), to avoid confusion when both release and source versions are installed on one's system.
-
-I use [gitmoji](https://github.com/carloscuesta/gitmoji-cli) to make my commit messages, but I'm not enforcing this on this repo so commits from PRs and the like might not be formatted that way.
-
-[Dependabot](https://dependabot.com) runs weekly to check dependencies updates. It is setup to auto-merge most of them as long as the builds checks passes.
+#### Getting the bleeding edge
+If you're interested in running the latest in-development version but don't want to compile source code yourself, you can can get pre-built nightly binaries on [GitHub Actions](https://github.com/GitSquared/edex-ui/actions): click the latest commits, and download the artifacts bundle for your OS.
 
 ## Credits
 eDEX-UI's source code was primarily written by me, [Squared](https://github.com/GitSquared). If you want to get in touch with me or find other projects I'm involved in, check out [my website](https://gaby.dev).
